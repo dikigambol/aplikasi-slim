@@ -8,7 +8,7 @@ use Slim\Http\UploadedFile;
 return function (App $app) {
     $container = $app->getContainer();
 
-    $app->get('/surat', function (Request $request, Response $response, array $args) {
+    $app->get('/surat/', function (Request $request, Response $response, array $args) {
         $sql = "SELECT * FROM suratkeluar";
         $rgs = $this->db->prepare($sql);
         $rgs->execute();
